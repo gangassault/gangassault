@@ -179,15 +179,15 @@ table.table td i {
                     <tr>
                         <th>Sl No</th>
                         <th>WORK</th>                       
-                       // <th>Email</th>
-                       // <th>Mobile Number</th>
+                       <!-- <th>Email</th>
+                        <th>Mobile Number</th>  --->
                         <th>Created Date</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                      <?php
-$ret=mysqli_query($con,"select * from tblusers");
+$ret=mysqli_query($con,"select * from to-do");
 $cnt=1;
 $row=mysqli_num_rows($ret);
 if($row>0){
@@ -197,9 +197,9 @@ while ($row=mysqli_fetch_array($ret)) {
 <!--Fetch the Records -->
                     <tr>
                         <td><?php echo $cnt;?></td>
-                        <td><?php  echo $row['FirstName'];?> <?php  echo $row['LastName'];?></td>
-                        <td><?php  echo $row['Email'];?></td>                        
-                        <td><?php  echo $row['MobileNumber'];?></td>
+                    <!---    <td><?php  echo $row['FirstName'];?> <?php  echo $row['LastName'];?></td> -->
+                        <td><?php  echo $row['work'];?></td>                        
+                   <!---      <td><?php  echo $row['MobileNumber'];?></td> --->
                         <td> <?php  echo $row['CreationDate'];?></td>
                         <td>
   <a href="read.php?viewid=<?php echo htmlentities ($row['ID']);?>" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
