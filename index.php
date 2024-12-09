@@ -182,7 +182,8 @@ table.table td i {
                         <th>Email</th>
                         <th>Mobile Number</th>  
                         <th>Created Date</th>
-                        <th>Work</th>
+                        <th>WORK</th>
+                         <th>PDC</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -203,6 +204,7 @@ while ($row=mysqli_fetch_array($ret)) {
                          <td><?php  echo $row['MobileNumber'];?></td>
                         <td> <?php  echo $row['CreationDate'];?></td>
                          <td> <?php  echo $row['work'];?></td>
+                         <td> <?php  echo $row['PDC_DATE'];?></td>
                         <td>
   <a href="read.php?viewid=<?php echo htmlentities ($row['ID']);?>" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                             <a href="edit.php?editid=<?php echo htmlentities ($row['ID']);?>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
