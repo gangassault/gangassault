@@ -177,10 +177,10 @@ table.table td i {
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Name</th>                       
-                        <th>Email</th>
-                        <th>Mobile Number</th>
+                        <th>Sl No</th>
+                        <th>WORK</th>                       
+                       // <th>Email</th>
+                       // <th>Mobile Number</th>
                         <th>Created Date</th>
                         <th>Action</th>
                     </tr>
