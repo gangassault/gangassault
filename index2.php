@@ -191,6 +191,7 @@ $ret=mysqli_query($con,"select * from to-do");
 $cnt=1;
 $row=mysqli_num_rows($ret);
 if($row>0){
+    echo "success";
 while ($row=mysqli_fetch_array($ret)) {
 
 ?>
