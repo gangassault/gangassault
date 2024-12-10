@@ -8,10 +8,12 @@ if(isset($_POST['submit']))
     $lname=$_POST['lname'];
     $contno=$_POST['contactno'];
     $email=$_POST['email'];
+    $work=$_POST['work'];
+    $PDC_DATE=$_POST['PDC_DATE'];
     $add=$_POST['address'];
    
   // Query for data insertion
-     $query=mysqli_query($con, "insert into tblusers(FirstName,LastName, MobileNumber, Email, Address) value('$fname','$lname', '$contno', '$email', '$add' )");
+     $query=mysqli_query($con, "insert into tblusers(FirstName,LastName, MobileNumber, Email,work,PDC_DATE, Address) value('$fname','$lname', '$contno', '$email','$work','$PDC_DATE', '$add' )");
     if ($query) {
     echo "<script>alert('You have successfully inserted the data');</script>";
     echo "<script type='text/javascript'> document.location ='index.php'; </script>";
