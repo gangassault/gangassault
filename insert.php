@@ -8,12 +8,14 @@ if(isset($_POST['submit']))
     $lname=$_POST['lname'];
     $contno=$_POST['contactno'];
     $email=$_POST['email'];
-    $work=$_POST['work'];
-    $pdc=$_POST['PDC_DATE'];
     $add=$_POST['address'];
+    $work=$_POST['work'];
+    $PDC_DATE=$_POST['PDC_DATE'];
+    
    
   // Query for data insertion
-     $query=mysqli_query($con, "insert into tblusers(FirstName,LastName, MobileNumber, Email, work, PDC_DATE, Address) value('$fname','$lname', '$contno', '$email','$work','$pdc', '$add' )");
+     $query=mysqli_query($con, "insert into tblusers(FirstName,LastName, MobileNumber, Email, Address, work, PDC_DATE) 
+     value('$fname','$lname', '$contno', '$email', '$add', '$work','$PDC_DATE')");
     if ($query) {
     echo "<script>alert('You have successfully inserted the data');</script>";
     echo "<script type='text/javascript'> document.location ='index.php'; </script>";
@@ -145,15 +147,16 @@ body {
         	<input type="email" class="form-control" name="email" placeholder="Enter your Email id" required="true">
         </div>
 	    <div class="form-group">
+            <textarea class="form-control" name="address" placeholder="Enter Your Address" required="true"></textarea>
+        </div>      
+	    <div class="form-group">
         	<input type="text" class="form-control" name="work" placeholder="Work" required="true">
         </div>
 	    <div class="form-group">
-        	<input type="date" class="form-control" name="pdc" placeholder="Date" required="true">
+        	<input type="date" class="form-control" name="PDC_DATE" placeholder="Date" required="true">
         </div>
 		
-		<div class="form-group">
-            <textarea class="form-control" name="address" placeholder="Enter Your Address" required="true"></textarea>
-        </div>        
+		  
       
 		<div class="form-group">
             <button type="submit" class="btn btn-success btn-lg btn-block" name="submit">Submit</button>
