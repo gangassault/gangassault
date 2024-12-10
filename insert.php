@@ -9,11 +9,11 @@ if(isset($_POST['submit']))
     $contno=$_POST['contactno'];
     $email=$_POST['email'];
     $work=$_POST['work'];
-    $PDC_DATE=$_POST['PDC_DATE'];
+    $pdc=$_POST['PDC_DATE'];
     $add=$_POST['address'];
    
   // Query for data insertion
-     $query=mysqli_query($con, "insert into tblusers(FirstName,LastName, MobileNumber, Email,work,PDC_DATE, Address) value('$fname','$lname', '$contno', '$email','$work','$PDC_DATE', '$add' )");
+     $query=mysqli_query($con, "insert into tblusers(FirstName,LastName, MobileNumber, Email, work, PDC_DATE, Address) value('$fname','$lname', '$contno', '$email','$work','$pdc', '$add' )");
     if ($query) {
     echo "<script>alert('You have successfully inserted the data');</script>";
     echo "<script type='text/javascript'> document.location ='index.php'; </script>";
@@ -148,7 +148,7 @@ body {
         	<input type="text" class="form-control" name="work" placeholder="Work" required="true">
         </div>
 	    <div class="form-group">
-        	<input type="date" class="form-control" name="PDC_DATE" placeholder="Date" required="true">
+        	<input type="date" class="form-control" name="pdc" placeholder="Date" required="true">
         </div>
 		
 		<div class="form-group">
