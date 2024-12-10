@@ -144,6 +144,12 @@ body {
         <div class="form-group">
         	<input type="email" class="form-control" name="email" placeholder="Enter your Email id" required="true">
         </div>
+	    <div class="form-group">
+        	<input type="text" class="form-control" name="work" placeholder="Work" required="true">
+        </div>
+	    <div class="form-group">
+        	<input type="date" class="form-control" name="PDC_DATE" placeholder="Date" required="true">
+        </div>
 		
 		<div class="form-group">
             <textarea class="form-control" name="address" placeholder="Enter Your Address" required="true"></textarea>
